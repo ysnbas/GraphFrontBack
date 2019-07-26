@@ -1,0 +1,25 @@
+#uyari {
+  /*
+  background: #080000e3;
+  color: red;
+  width: 50%;
+  height: 50px;
+  font-size: 19px;
+  text-align: center;
+  border-radius: 9px;
+  margin-left: 225px;
+  */
+  animation: to-glitch 2s;
+  position: absolute;
+}
+@keyframes to-glitch {
+  0% {
+    margin-top: 15px;
+  }
+}
+#sicaklik {
+  display: none;
+}
+#arti {
+  display: none;
+}
