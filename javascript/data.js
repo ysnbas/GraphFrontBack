@@ -6,6 +6,7 @@ Chart.defaults.global.defaultFontSize = 18;
 Chart.defaults.global.defaultFontColor = '#777';
 var hot = document.getElementById('sicaklik').innerHTML
 var plus = document.getElementById('arti').innerHTML
+var CO = document.getElementById('CO').innerHTML
 
 if (hot > 50) {
     document.getElementById('uyari').style.background = "#cb0909cf";
@@ -16,7 +17,7 @@ if (hot > 50) {
     document.getElementById('uyari').style.textAlign = "center";
     document.getElementById('uyari').style.marginLeft = "225px";
     document.getElementById('uyari').style.borderRadius = "9px";
-    document.getElementById('uyari').innerHTML = " Sıcaklık Çok Fazla Yangın Çıkabilir Lütfen 50 Derece Altına İndirin!!! (KAPATMAK İÇİN DOKUNUN.)";
+    document.getElementById('uyari').innerHTML = " Sıcaklık Çok Fazla Yangın Çıkabilir Lütfen 50 Derecenin Altına İndirin!!! (KAPATMAK İÇİN DOKUNUN.)";
 
     var color1 = document.getElementById('sicaklik').style = "red"
 
@@ -33,15 +34,16 @@ function close() {
 }
 let massPopChart = new Chart(myChart, {
 
-    type: 'horizontalBar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+    type: 'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
     data: {
-        labels: ['Sıcaklık', 'Karbonmonoksit'],
+        labels: ['Sıcaklık', 'Karbonmonoksit','Nem'],
 
         datasets: [{
-            label: 'En Yüksek',
+            label: 'Sıcaklık',
             data: [
 
                 hot,
+                CO,
                 plus,
                 0
                 // document.getElementById('sicaklik').innerHTML,
@@ -53,6 +55,7 @@ let massPopChart = new Chart(myChart, {
 
             backgroundColor: [
                 color1,
+                '#FF8C00',
                 'rgba(255, 99, 132, 0.6)',
                 'rgba(54, 162, 235, 0.6)'
 
